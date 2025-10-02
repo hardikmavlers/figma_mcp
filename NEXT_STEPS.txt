@@ -1,0 +1,74 @@
+╔══════════════════════════════════════════════════════════════╗
+║          DOWNLOAD FIGMA IMAGES - NEXT STEPS                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+Your repository has been updated! ✓
+
+The HTML now references:
+  - assets/image-one.png (309.61px × 350.55px)
+  - assets/image-two.png (209px × 182px)  
+  - assets/image-three.png (400px × 474px)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TO DOWNLOAD THE ACTUAL IMAGES FROM FIGMA:
+
+Option 1: AUTOMATED (Using PowerShell Script)
+───────────────────────────────────────────────
+
+1. Get Figma Token:
+   → Visit: https://www.figma.com/developers/api#access-tokens
+   → Click "Get personal access token"
+   → Copy your token (starts with figd_...)
+
+2. Set token in PowerShell:
+   → $env:FIGMA_TOKEN = "your-token-here"
+
+3. Run the download script:
+   → .\download_figma_images.ps1
+
+4. Commit and push:
+   → git add assets/
+   → git commit -m "Add Figma images"
+   → git push origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Option 2: MANUAL (From Figma UI)
+────────────────────────────────
+
+1. Open Figma:
+   → https://www.figma.com/design/PGECA0PxOBEDcs2NDqGMWj/Layout-6?node-id=1-50
+
+2. For each image:
+   → Select "image one" layer
+   → Right panel → Export section
+   → Set to PNG, 1x scale  
+   → Export and save as "image-one.png" in assets/ folder
+   
+   → Repeat for "image two" → save as "image-two.png"
+   → Repeat for "image three" → save as "image-three.png"
+
+3. Verify in browser:
+   → Open index.html
+
+4. Commit and push:
+   → git add assets/
+   → git commit -m "Add Figma images"
+   → git push origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT:
+ The Figma MCP tool can only fetch image metadata and references.
+ It cannot directly download the actual image files.
+ You need to use one of the methods above to get the images.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For detailed instructions, see:
+  → QUICK_START.md (recommended)
+  → DOWNLOAD_IMAGES.md (detailed guide)
+
+GitHub Repo: https://github.com/hardikmavlers/figma_mcp
+
